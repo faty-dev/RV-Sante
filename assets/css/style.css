@@ -1,0 +1,466 @@
+:root {
+    --bg-dark: #071022;
+    --bg-primary: #0b4d8d;
+    --bg-secondary: #0d6efd;
+    --text-light: #f8f9fa;
+    --text-muted: #ced4da;
+    --surface: #ffffff;
+    --surface-soft: rgba(255,255,255,0.12);
+}
+
+body {
+    background: linear-gradient(180deg, #08112c 0%, #131a3b 100%);
+    color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(23, 30, 51, 0.08);
+}
+
+.navbar {
+    min-height: 72px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #0f172a;
+}
+
+.brand-name {
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.navbar-nav {
+    gap: 2rem;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: #0b4d8d;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.nav-link.active {
+    color: #0b4d8d;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #0b4d8d;
+    border-radius: 999px;
+    margin-top: 6px;
+}
+
+.nav-link:hover {
+    color: #0b4d8d;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        background: #ffffff;
+        padding: 1rem 0;
+    }
+    .navbar-nav .nav-link {
+        color: #0f172a;
+    }
+}
+
+.hero-section {
+    background: radial-gradient(circle at top right, rgba(34,106,255,.28) 0%, transparent 45%),
+                linear-gradient(180deg, rgba(16,28,70,.95) 0%, rgba(6,16,44,.98) 100%);
+    position: relative;
+    overflow: hidden;
+    color: #f8fafc;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section .display-5,
+.hero-section .lead,
+.hero-section .eyebrow,
+.hero-section .btn,
+.hero-section .text-muted {
+    color: #f8fafc;
+}
+
+.eyebrow {
+    color: #93c5fd;
+    letter-spacing: .18em;
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.hero-section .text-secondary {
+    color: rgba(248,250,252,0.82) !important;
+}
+
+.hero-search {
+    border: 1px solid rgba(255,255,255,.12);
+}
+
+.hero-search .form-control {
+    border: none;
+    background: rgba(255,255,255,.95);
+}
+
+.hero-search .btn {
+    background: #020919;
+    border: none;
+}
+
+.hero-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,.12);
+}
+
+.hero-illustration,
+.doctor-hero-card,
+.book-hero-card {
+    background: #0b4d8d;
+    border: 1px solid rgba(255,255,255,.12);
+}
+
+.hero-illustration img,
+.doctor-hero-card img,
+.book-hero-card img,
+.image-card img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.image-card {
+    min-height: 340px;
+}
+
+.image-card-body {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.bg-soft {
+    background: rgba(11, 77, 141, 0.08) !important;
+}
+
+.service-card {
+    background: linear-gradient(180deg, rgba(11, 77, 141, 0.95), rgba(9, 63, 123, 0.95));
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.service-icon {
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.12);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+.category-list .btn {
+    color: #ffffff;
+    border-color: rgba(255,255,255,.25);
+}
+
+.category-list .btn:hover {
+    color: #0b4d8d;
+    background: #ffffff;
+}
+
+.section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.bg-light {
+    background: rgba(255,255,255,.10) !important;
+}
+
+.card {
+    border: none;
+    background: rgba(255,255,255,.08);
+}
+
+.card-body,
+.card-title,
+.card-text,
+.card-footer,
+.footer,
+.section h2,
+.section p,
+.section ul li,
+.alert,
+.summary-card,
+.metric-card,
+.hospital-card,
+.feature-card {
+    color: #f8fafc;
+}
+
+.card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.text-secondary,
+.text-muted {
+    color: rgba(248,250,252,0.76) !important;
+}
+
+.footer {
+    background: #020919;
+}
+
+.footer-link {
+    color: rgba(255,255,255,.75);
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+.step-number {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: .75rem;
+    background: #0b4d8d;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+#disponibilites .doctor-hero-card,
+#disponibilites .section,
+#disponibilites .step-number,
+#disponibilites h3,
+#disponibilites h6,
+#disponibilites p:not(.disponibilites-intro),
+#disponibilites .text-muted {
+    color: #000000 !important;
+}
+
+#disponibilites .disponibilites-intro {
+    color: #ffffff !important;
+}
+
+#disponibilites > .container > .row > .col-lg-6:first-child p.text-muted {
+    color: #ffffff !important;
+}
+
+#disponibilites .step-number {
+    background: #0f172a;
+    color: #ffffff !important;
+}
+
+input.form-control,
+textarea.form-control,
+select.form-control {
+    box-shadow: none !important;
+}
+
+.footer {
+    background: linear-gradient(180deg, #020919 0%, #061522 100%);
+    padding: 3rem 0;
+    color: #f8fafc;
+}
+
+.footer-brand,
+.footer-brand .brand-name {
+    color: #f8fafc;
+}
+
+.footer-copy {
+    max-width: 320px;
+    color: rgba(248,250,252,.78);
+}
+
+.footer-links li {
+    margin-bottom: .65rem;
+}
+
+.footer-links a {
+    color: rgba(248,250,252,.75);
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-newsletter .form-control {
+    min-width: 0;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    color: #f8fafc;
+}
+
+.footer-newsletter .form-control::placeholder {
+    color: rgba(248,250,252,.65);
+}
+
+.footer-newsletter .btn {
+    min-width: 130px;
+}
+
+.footer-bottom {
+    border-color: rgba(255,255,255,.1);
+}
+
+.footer-social {
+    display: inline-grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: rgba(255,255,255,.08);
+    color: #f8fafc;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.footer-social:hover {
+    background: rgba(11, 77, 141, 0.95);
+    transform: translateY(-2px);
+}
+
+.testimonial-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #f8fafc;
+}
+
+.testimonial-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: rgba(11, 77, 141, 0.95);
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+}
+
+.testimonial-card p {
+    color: rgba(248,250,252,0.9);
+}
+
+.testimonial-card h6 {
+    color: #ffffff;
+}
+
+.testimonial-card small {
+    color: rgba(248,250,252,0.7);
+}
+
+.btn-dark {
+    background: #0b4d8d;
+    border-color: #0b4d8d;
+}
+
+.btn-dark:hover,
+.btn-outline-dark:hover {
+    background: #09407b;
+    border-color: #09407b;
+}
+
+@media (max-width: 991px) {
+    .hero-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.auth-page {
+    min-height: calc(100vh - 140px);
+    background: linear-gradient(180deg, rgba(7,16,34,.96) 0%, rgba(7,16,34,.99) 100%);
+}
+
+.auth-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #f8fafc;
+}
+
+.auth-card .form-control {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #f8fafc;
+}
+
+.auth-card .form-control:focus {
+    background: rgba(255,255,255,0.12);
+    color: #f8fafc;
+}
+
+.auth-card .form-label {
+    color: rgba(248,250,252,0.88);
+}
+
+.auth-card .form-check-label {
+    color: rgba(248,250,252,0.88);
+}
+
+.auth-card a {
+    color: #ffffff;
+}
+
+.auth-card a:hover {
+    color: #dbeafe;
+}
+
+.table-dark th,
+.table-dark td {
+    border-color: rgba(255,255,255,0.08);
+}
